@@ -12,7 +12,7 @@ define(['dojo/_base/declare',
 		
 		postMixInProperties: function()
 		{
-			this.widgetOnlyConfig = JSON.parse(JSON.stringify(this.config));
+			this.widgetOnlyConfig = Object.assign({}, this.config);
 			this.config = ExtendedConfigManager.getInstance().extendConfig(this.config);
 		},
 
